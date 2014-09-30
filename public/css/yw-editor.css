@@ -1,0 +1,132 @@
+/**
+*
+*	Yellow Text 
+*	========================================
+*	This is a pre-made theme for the Yellow
+*	text editor and it's not needed to run
+*	the plugin. 
+*
+*/
+.js-editor-container {
+  
+}
+
+/**
+*
+*	Buttons
+*	========================================
+*	This section styles the buttons and the 
+*	button bar, that holds all the buttons.
+*
+*/
+.js-editor-buttons {
+  background:#444;
+}
+
+.js-editor-buttons > a {
+  display: block;
+  float: left;
+  width: 16px;
+  height: 16px;
+  margin: 8px;
+  font: 16px;
+  text-align: center;
+  text-transform: uppercase;
+  color:#fff;
+  /*text-shadow: 0 1px white;*/
+  cursor: pointer;
+}
+a.js-editor-save,
+a.js-editor-cancel {
+  width: 55px;
+  text-shadow: none;
+  background: #777;
+  color: #fff;
+  text-transform: capitalize;
+  margin:5px;
+  padding: 4px 6px;
+  border-radius:100px;
+  font-weight: lighter;
+}
+a.js-editor-save:hover,a.js-editor-save:active,
+a.js-editor-cancel:hover, a.js-editor-cancel:active{
+  background:#96bb49;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.strikethrough {
+  text-decoration: line-through;
+}
+
+.icon-sprite, .JustifyLeft, .JustifyCenter, .JustifyRight, .InsertUnorderedList, .InsertOrderedList, .image, .link {
+  background: url('../img/icon-s634930a1a1.png') no-repeat;
+}
+
+.JustifyLeft,
+.JustifyCenter,
+.JustifyRight,
+.InsertUnorderedList,
+.InsertOrderedList,
+.image,
+.link {
+  margin-top: 9px;
+  text-indent: -99999em;
+}
+
+.JustifyLeft {
+  background-position: 0 -276px;
+}
+
+.JustifyCenter {
+  background-position: 0 -184px;
+}
+
+.JustifyRight {
+  background-position: 0 -230px;
+}
+
+.InsertUnorderedList {
+  background-position: 0 -138px;
+}
+
+.InsertOrderedList {
+  background-position: 0 -46px;
+}
+
+.image {
+  background-position: 0 -92px;
+}
+
+.link {
+  background-position: 0 0;
+}
+/*
+.js-editor-buttons a:first-child {
+  margin-left: 35px;
+}
+
+.js-editor-buttons a:nth-child(4) {
+  margin-right: 35px;
+}
+
+.js-editor-buttons a:nth-child(7) {
+  margin-right: 35px;
+}
+
+.js-editor-buttons a:nth-child(9) {
+  margin-right: 35px;
+}
+*/
+.js-editor-iframe {
+}

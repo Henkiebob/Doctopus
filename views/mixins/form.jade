@@ -1,0 +1,33 @@
+mixin text(label, element, name, value)
+	div.option-container
+		div.option-definition
+			label(for="id-#{element}-#{name}")= label
+		div.option-definition 
+			input(type="text", name='#{name}', value='#{value}', size='20', data-element="#{element}", id="id-#{element}-#{name}")
+
+mixin setpx(label, element, name, value)
+	div.option-container
+		div.option-definition
+			label(for="id-#{element}-#{name}")= label
+		div.option-definition 
+			input(type="text", name='#{name}', value='#{value}', size='4', data-element="#{element}", class="setpx", id="id-#{element}-#{name}")
+
+mixin color(label, element, name, value)
+	div.option-container
+		div.option-definition
+			label(for="id-#{element}-#{name}")= label
+		div.option-definition 
+			input(type="text", name='#{name}', value='#{value}', size='4', data-element="#{element}", class="colorpicker", id="id-#{element}-#{name}")
+
+mixin select(label, element, name, options, selected)
+	div.option-container
+		div.option-definition
+			label(for="id-#{element}-#{name}")= label
+		div.option-definition
+			div.select-arrow 
+				select(name="#{name}", data-element="#{element}", id="id-#{element}-#{name}")
+					each key, value in options
+						if value == selected
+							option(value="#{value}", selected="selected")= key
+						else
+							option(value="#{value}")= key

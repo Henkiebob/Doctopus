@@ -1,0 +1,266 @@
+@import 'fonts.css';
+
+body {
+	background:url(../img/intro-bg1920px.png) no-repeat center center fixed #96bb49;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+
+	padding-top: 76px;
+
+	font-family:'RobotoSlabRegular';
+	font-size:0.8em;
+	overflow-y:scroll;
+}
+
+header {
+	background: #222222;
+	width: 100%;
+}
+	
+#container {
+	margin: 0 auto;
+}
+.navbar{
+	
+}
+	.navbar-inner{
+		
+	}
+		.navbar .brand{
+			padding: 6px 0px 6px 11px;
+		}
+			.navbar .brand img {
+				margin-left: 15px;
+			}
+		.navbar .login{
+			margin: 3px 20px 0 0;
+		}
+			#login-dropdown {
+				padding: 5px;
+				display: none;
+				position: absolute;
+				right: 20px;
+				top: 60px;
+			}
+#dashboardDocuments ul, #sharedDocuments ul {
+	margin-top: 50px;
+}
+#dashboardDocuments ul li, #sharedDocuments ul li {
+	margin-top: 20px;
+}
+#dashboardDocuments ul li:nth-child(3n - 2), #sharedDocuments ul li:nth-child(3n - 2){
+	margin-left: -10px;
+}
+#actionBar {
+	margin: -40px 0 40px 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'BebasRegular' !important;
+}
+/*
+ *
+ *			Registration Form
+ *
+ ****************************************/
+
+#registration{
+	
+}
+	#registration h1 {
+		font-family: 'BebasRegular'; /* BebasRegular, RobotoSlabRegular */
+		font-size: 36px;
+		margin: 0 0 15px 40px;
+		padding-top: 20px;
+	}
+	#registration #container{
+		margin: 0 auto;
+		width: 600px;
+		background: #91BB5C;
+	}
+		#registration-form {
+			
+		}
+			#registration-form label {
+				display: block;
+				margin-left: 15px;
+				font-weight: bold;
+			}
+
+/* Bootstrap overrule */
+
+h2{
+	color:#96bb49;
+	border-bottom:2px solid #96bb49;
+}
+
+#actionBar{
+	margin:0px;
+}
+
+a:link{
+	color:#fff;
+}
+a:hover{
+	color:#fff;
+}
+a:visited{
+	color:#fff;
+}
+a:active{
+	color:#fff;
+}
+
+#registration h1{
+	color:#96bb49;
+	margin:0px 15px 38px 15px;
+	border-bottom:2px solid #94bb46;
+	padding:15px 0px 8px 0px;
+}
+
+.well{
+	color:#777;
+	background:#222;
+	border:0px;
+	border-radius:8px;
+	font-family:arial;
+	-webkit-box-shadow:  0px 0px 3px 3px rgba(0, 0, 0, 0.3);
+	box-shadow:  0px 0px 3px 3px rgba(0, 0, 0, 0.3);
+}
+
+#login-form{
+	padding:0px 10px;
+}
+
+.navbar{
+	display:block;
+}
+
+form{
+	margin-bottom:10px;
+}
+
+.btn, .btn-success{
+	color:#fff;
+	background:#444;
+	border:0px;
+	text-shadow:none;
+	box-shadow:none;
+	border-radius:100px;
+	padding:7px 16px;
+	width:auto;
+	font-family:arial;
+}
+.btn:hover, .btn:active, .btn-success:hover, .btn-success:active, .btn-succes:focus, .btn-succes.disabled, .btn-succes[disabled]{
+	color:#fff;
+	background-color:#96bb49;
+}
+
+.navbar-inner{
+	min-height:0px;
+	height:47px;
+}
+.navbar-inverse .navbar-inner{
+	background:#222;
+	background-image:none;
+	border:0px;
+	box-shadow:none;
+	display:block;
+	-webkit-box-shadow:  0px 0px 3px 3px rgba(0, 0, 0, 0.3); 
+    box-shadow:  0px 0px 3px 3px rgba(0, 0, 0, 0.3);
+}
+.navbar .navbar-inverse .navbar-fixed-top{
+	display:block;
+}
+.navbar-inner:before, .navbar-inner:after{
+	display: block;
+	content:none;
+}
+.navbar .btn, .navbar .btn-group{
+	margin-top:3px;
+}
+
+.submit{
+	background:#777;
+	border:0px;
+	text-shadow:none;
+	box-shadow:none;
+	border-radius:100px;
+	padding:5px 16px;
+	margin-left:10px;
+	font-family:arial;
+}
+.submit:hover, .submit:active{
+	color:#fff;
+	background:#e32d2c;
+}
+
+input[type]{
+	border:0px;
+	color:#000;
+	background:#ccc;
+	border-radius:100px;
+	padding-left:14px;
+	width:190px;
+}
+
+.modal-header h3{
+	color:#96bb49;
+	margin-top:10px;
+}
+.modal{
+	font-family:arial;
+	color:#fff;
+	background:#222;
+}
+.modal-header {
+	border:none;
+}
+.modal-body{
+	border:none;
+}
+.modal-footer{
+	box-shadow:none;
+	border:none;
+	background:transparent;
+}
+select, input[type="file"]{
+	width:220px;
+	border-radius:100px;
+	background-color:#ccc !important;
+}
+.thumbnail{
+	border:none;
+	background:#ccc;
+	border-radius:8px;
+	padding:0px;
+	margin-bottom:10px;
+}
+.table-striped tbody > tr:nth-child(odd) > td{
+	background-color:#333;
+
+}
+.table td, .table thead tr, .table tbody + tbody{
+	border:none;
+}
+
+button.close {
+	color: #FFF;
+	opacity: 0.5;
+}
+button.close:hover {
+	color: #96bb49;
+	opacity: 1;
+}
+.alert-error {
+	color: #FFFFFF;
+	background: #e32d2d;
+	border: none;
+	text-shadow: none;
+}
+.alert-error h2 {
+	color: #FFFFFF;
+	border-bottom: none; /*2px solid #FFFFFF;*/
+}

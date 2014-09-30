@@ -1,0 +1,32 @@
+html(ng-app)
+	head
+		title= pageTitle
+		link(rel="stylesheet", type="text/css", href="/css/page.css")
+		link(rel="stylesheet", type="text/css", href="/css/reset.css")
+		link(rel="shortcut icon", href="/favicon.png")
+
+	body
+		div#header
+			a(href="/")
+				img(src="img/assets/logo.png")
+			if user
+				a(href="/dashboard", class="button") Dashboard
+				a(href="/logout", class="button") Logout
+			else
+				a.button(href="javascript:;") Login
+				#login-dropdown.well
+					form#login-form(method="post")
+						label.control-label(for="email") Email
+						input(name="email", type="email", placeholder="Email")
+						label.control-label(for="password") Password
+						input(name="password", type="password", placeholder="password")
+						br
+						button.btn.btn-success(type="submit") Login
+				a.button(href="register") Signup
+
+		div#background
+			p#title Doctopus
+			p#slogan "Creating documents is easy again."
+		div#footer
+			div#gettingstarted
+				a(href="register", id="gettingstartedbutton") Get started

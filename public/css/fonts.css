@@ -1,0 +1,22 @@
+/* fonts */
+@font-face {
+    font-family: 'BebasRegular';
+    src: url('fonts/bebas___.eot');
+    src: url('fonts/bebas___.eot') format('embedded-opentype'),
+         url('fonts/bebas___.woff') format('woff'),
+         url('fonts/bebas___.ttf') format('truetype'),
+         url('fonts/bebas___.svg#BebasRegular') format('svg');
+    font-weight:normal;
+    font-style:normal;
+}
+
+@font-face {
+    font-family: 'RobotoSlabRegular';
+    src: url('fonts/robotoslab-regular.eot');
+    src: url('fonts/robotoslab-regular.eot') format('embedded-opentype'),
+         url('fonts/robotoslab-regular.woff') format('woff'),
+         url('fonts/robotoslab-regular.ttf') format('truetype'),
+         url('fonts/robotoslab-regular.svg#RobotoSlabRegular') format('svg');
+    font-weight:normal;
+    font-style:normal;
+}

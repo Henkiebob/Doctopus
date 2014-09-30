@@ -1,0 +1,65 @@
+extends ../layout
+
+block content
+	.span3.well
+		h2 #{document.title}
+		p: img(src="holder.js/300x200/doctopus")
+		button.btn.btn-danger.btn-large#removeDocumentButton(href="#") Delete document
+		
+	.span9.well#manageDocuments
+		table.table.table-striped
+			thead
+				tr
+					th Username
+					th Email
+					th Actions
+					
+			tbody
+			if collaborators
+				each collaborator in collaborators
+					tr
+						td #{collaborator.username}
+						td #{collaborator.email}
+						td
+							a.btn(href="#")
+								i.icon-white.icon-edit
+							&nbsp;
+							a.btn.btn-danger(href="#")
+								i.icon-white.icon-remove
+			else
+				tr
+					td(colspan="3", style="text-align: center;") No collaborators
+					
+		button.btn.btn-success#newCollaboratorButton(href="#") Add user
+		
+		#newCollaboratorModal.modal.hide.fade(tabindex="-1", role="dialog", aria-labbeledby="newCollaboratorModal", aria-hidden="true")
+			.modal-header
+				button.close(type="button", data-dismiss="modal", aria-hidden="true") x
+				h3#newCollaboratorModal New collaborator
+			.modal-body
+				span Collaborator email
+				br
+				input(type="email", name="collaboratorEmail", placeholder="Collaborator email")
+				br
+				span Collaborator rights
+				br
+				select(name="collaboratorRights")
+					option(value="edit", selected="selected") Edit
+					option(value="view") View
+			.modal-footer
+				button.btn(data-dismiss="modal", aria-hidden="true") Close
+				button.btn.btn-success Save Collaborator
+				
+		#removeDocumentModal.modal.hide.fade(tabindex="-1", role="dialog", aria-labbeledby="removeDocumentModal", aria-hidden="true")
+			.modal-header
+				button.close(type="button", data-dismiss="modal", aria-hidden="true") x
+				h3#newCollaboratorModal Delete document
+			.modal-body
+				.alert.alert-error.alert-block
+					//button.close(data-dismiss="alert") &times;
+					h2 Warning
+					p Deleting this document can't be undone!!!
+				p Are you sure you want to delete "#{document.title}"?
+			.modal-footer
+				button.btn(data-dismiss="modal", aria-hidden="true") Close
+				button.btn.btn-danger Delete document

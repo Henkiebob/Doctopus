@@ -1,0 +1,36 @@
+extends ../layout
+
+block content
+	div#registration.span5.offset3.well
+		h1 Register
+		form#registration-form.form-horizontal(method="post")
+			.control-group
+				label.control-label(for="username") Username
+				.controls
+					input(name="username", type="text", placeholder="Username")
+			.control-group
+				label.control-label(for="firstname") First name
+				.controls
+					input(name="firstname", type="text", placeholder="First name")		
+			.control-group
+				label.control-label(for="lastname") Last name
+				.controls
+					input(name="lastname", type="text", placeholder="Last name")
+			.control-group
+				label.control-label(for="email") E-mail Address
+				.controls
+					input(name="email", type="email", placeholder="example@website.com")
+			.control-group
+				label.control-label(for="password") Password
+				.controls
+					input(name="password", type="password", placeholder="password")
+			.control-group
+				label.control-label(for="confirm-password") Confirm password
+				.controls
+					input(name="confirm-password", type="password", placeholder="Confirm password")
+			.control-group
+				.controls
+					button.btn.btn-success(type="submit") Register
+					&nbsp;
+					a.submit.btn(href="#") Cancel
+				

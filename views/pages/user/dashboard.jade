@@ -1,0 +1,51 @@
+extends ../layout
+
+block content
+	.span3.well
+		h2=user.username
+		p: strong Avatar
+		p: img(src="#{avatar}")
+		p: strong Name
+		p #{user.firstname} #{user.lastname}
+	.span9.well#dashboardDocuments
+		h2 Documents
+		#actionBar.pull-right
+			a#newDocumentButton.btn.btn-success(href="#newDocumentModal", data-goggle="modal") New document
+		
+		ul.documentList
+			each document in documents
+				li.span4
+					.thumbnail
+						a.thumbnail(href="#")
+							img(width="300px", height="200px", data-src="holder.js/300x200/doctopus")
+						.caption
+							h3 #{document.get('title')}
+							p #{document.get('description')}
+							p.muted Last modified: #{moment(document.updated_at).fromNow()}
+							p
+								a.btn.btn-success(href="/document/manage/#{document.get('id')}") Manage
+								&nbsp;
+								a.btn(href="/document/edit/#{document.get('id')}") Edit
+		
+	#newDocumentModal.modal.hide.fade(tabindex="-1", role="dialog", aria-labbeledby="newDocumentModal", aria-hidden="true")
+		.modal-header
+			button.close(type="button", data-dismiss="modal", aria-hidden="true") x
+			h3#newDocumentModal New document
+		.modal-body
+			span Document Title
+			br
+			input(type="text", name="documentTitle", placeholder="Document Title")
+			br
+			span Document Description
+			br
+			input(type="text", name="documentDescription", placeholder="Document Description")
+			br
+			span Document Visibility
+			br
+			select(name="documentVisibility")
+				option(value="public", selected="selected") Public
+				option(value="private") Private
+			input(type="hidden", name="username", value=user.username)
+		.modal-footer
+			button.btn(data-dismiss="modal", aria-hidden="true") Close
+			button.btn.btn-success Create new document
